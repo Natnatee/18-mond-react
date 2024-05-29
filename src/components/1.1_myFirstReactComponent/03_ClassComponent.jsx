@@ -1,4 +1,14 @@
-// Exercise:
-// 1. Create a React class component
-// 2. Pass in props (short for properties), similar to passing arguments to a JavaScript function. Both providing inputs to a piece of code.
-// 3. Define prop types
+import React, { Component } from 'react';
+
+class HelloJsd7 extends Component {
+    render() {
+        return (
+            <div className="flex flex-col">
+                <h1>Hello, {this.props.g}</h1>
+                <h6>This React component is made by a class, we call it a class component</h6>
+            </div>
+        );
+    }
+}
+
+export default HelloJsd7;

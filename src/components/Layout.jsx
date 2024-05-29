@@ -1,4 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
+// import "./1.2_pages/Page01"
+// import "./1.2_pages/Page02"
+// import "./1.2_pages/Page03"
 
 const Layout = () => {
   return (
