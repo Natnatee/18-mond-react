@@ -41,7 +41,7 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: "/page003",
+    path: "/page03",
     element: <Layout/>,
     children: [
       {

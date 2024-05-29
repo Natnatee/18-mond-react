@@ -4,7 +4,7 @@ import "../../App";
 function PageOne() {
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-slate-600">
         <h1>This Page One</h1>
         <h6>Welcome to page One!</h6>
     </div>
