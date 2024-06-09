@@ -1,59 +1,52 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { createBrowserRouter, RouterProvider, } from "react-router-dom"
+import Layout from "../src/components/Layout.jsx"
 import App from './App.jsx'
 import PageOne from "./components/1.2_pages/Page01.jsx"
-import PageTwo from "./components/1.2_pages/Page02.jsx"
-import PageThree from "./components/1.2_pages/Page03.jsx"
 import './index.css'
-import { createBrowserRouter,RouterProvider } from "react-router-dom"
-import Layout from "../src/components/Layout.jsx"
 
 
-const router = createBrowserRouter([
+const router2 = createBrowserRouter([
   {
-    path: "/",
-    element: <Layout/>,
-    children: [
-      {
-        path:"",
-        element: <App/>,
-      }
-    ]
+    path: "",
+    element: (<>
+                <Layout/>
+                <App/>
+              </>
+    ),
   },
   {
-    path: "/page01",
-    element: <Layout/>,
-    children: [
-      {
-        path:"",
-        element: <PageOne/>,
-      }
-    ]
-  },
-  {
-    path: "/page02",
-    element: <Layout/>,
-    children: [
-      {
-        path:"",
-        element: <PageTwo/>,
-      }
-    ]
-  },
-  {
-    path: "/page03",
-    element: <Layout/>,
-    children: [
-      {
-        path:"",
-        element: <PageThree/>,
-      }
-    ]
+    path: "/owner",
+    element: (<>
+                <Layout/>
+                <PageOne/>
+              </>
+    ),
   },
 ]);
 
+// {
+//   path: "",
+//   element: (<>
+//               <Layout/>
+//               <Outlet />
+//             </>
+//   ),
+//   children: [
+//     {
+//       path:"",
+//       element: <App/>,
+//     },
+//     {
+//       path:"/owner",
+//       element: <PageOne/>,
+//     }
+//   ]
+// },
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/> 
+    <RouterProvider router={router2}/> 
   </React.StrictMode>
 );

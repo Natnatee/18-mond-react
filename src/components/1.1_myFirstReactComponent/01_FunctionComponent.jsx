@@ -1,14 +1,22 @@
-// Exercise:
-// 1. Create a React function component
-// 2. Pass in props (short for properties), similar to passing arguments to a JavaScript function. Both providing inputs to a piece of code.
-// 3. Define prop types
-function HelloEarth ({b}) {
+
+
+function ProductList ({products}) {
     return (
-        <div className="flex flex-col">
-      <h1>Hello, {b}</h1>
-      <h6>This React component is made by a function declaration, we call it a function component</h6>
-    </div>
+      <div>
+          <div className='flex justify-center'>
+            <span className='w-1/4 text-center text-lg font-bold border border-gray-600 bg-slate-200'>Name</span>
+            <span className='w-1/4 text-center text-lg font-bold border border-gray-600 bg-slate-200'>Last Name</span>
+            <span className='w-1/4 text-center text-lg font-bold border border-gray-600 bg-slate-200'>Position</span>
+          </div>
+          {products.filter(product => product.check).map((product) => (
+          <div key={product.id} className="flex justify-center">
+            <div className='w-1/4 text-center text-lg border border-gray-600'> {product.name}</div>
+            <div className='w-1/4 text-center text-lg border border-gray-600'> {product.price}</div>
+            <div className='w-1/4 text-center text-lg border border-gray-600'> {product.image}</div>
+          </div>
+        ))}
+      </div>
     )
 }
 
-export default HelloEarth;
+export default ProductList;

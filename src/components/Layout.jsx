@@ -1,7 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
-// import "./1.2_pages/Page01"
-// import "./1.2_pages/Page02"
-// import "./1.2_pages/Page03"
+import { Link } from "react-router-dom";
 
 const Layout = () => {
   return (
@@ -14,23 +11,12 @@ const Layout = () => {
             </Link>
           </li>
           <li>
-            <Link to="/page01" className="text-white hover:text-gray-400">
-              One
-            </Link>
-          </li>
-          <li>
-            <Link to="/page02" className="text-white hover:text-gray-400">
-              Two
-            </Link>
-          </li>
-          <li>
-            <Link to="/page03" className="text-white hover:text-gray-400">
-              Three
+            <Link to="/owner" className="text-white hover:text-gray-400">
+              Owner
             </Link>
           </li>
         </ul>
       </nav>
-      <Outlet />
     </div>
   );
 };
