@@ -1,10 +1,8 @@
 import { useState} from "react";
-import "./App.css";
-import ProductList from "./components/1.1_myFirstReactComponent/01_FunctionComponent";
-import ProductForm from "./components/1.1_myFirstReactComponent/02_FunctionalComponent";
+import ProductList from "./components/Home_Sector/User_Home_Sector";
+import ProductForm from "./components/Home_Sector/Admin_Home_Sector";
 
-function App () {
-  const [products, setProducts] = useState([])
+function App ({ products, setProducts }) {
 
   const [first, setFirst] = useState(false);
   const [second, setSecond] = useState(false);

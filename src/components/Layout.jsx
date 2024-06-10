@@ -15,6 +15,11 @@ const Layout = () => {
               Owner
             </Link>
           </li>
+          <li>
+            <Link to="/practice" className="text-white hover:text-gray-400">
+              Practice
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
